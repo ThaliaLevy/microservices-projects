@@ -1,2 +1,3 @@
 - actuator serve para auxiliar nos microsserviços;
 - o endpoint http://localhost:8080/actuator/health é próprio do actuator e serve para verificarmos a saúde do nosso sistema;
+- usei banco de dados iguais, mas poderiam ser diferentes;
