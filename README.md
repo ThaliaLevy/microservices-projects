@@ -1,4 +1,4 @@
-# microservices
-Repositório para armazenar práticas sobre microsserviços.
+<h2>Fontes de estudos</h2>
 
-Curso 01: https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas
+1 - Playlist Spring Boot Microservices, canal "Java Brains": <br>
+https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas
