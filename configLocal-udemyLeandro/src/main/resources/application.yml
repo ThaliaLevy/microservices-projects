@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ThaliaLevy/config-server
+          uri: https://github.com/ThaliaLevy/microservices-training/tree/master/configServer-udemyLeandro
           default-label: master-branch
           search-paths:
           - 'greeting-service*' 
