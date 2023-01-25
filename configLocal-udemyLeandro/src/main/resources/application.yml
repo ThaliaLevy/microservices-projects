@@ -2,12 +2,12 @@ server:
   port: 8888
 spring:
   application:
-    name: configServer-udemyLeandro
+    name: configLocal-udemyLeandro
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/ThaliaLevy/microservices-training/tree/master/configServer-udemyLeandro
-          default-label: master-branch
+          uri: https://github.com/ThaliaLevy/microservices-training
+          default-label: master
           search-paths:
-          - 'greeting-service*' 
+          - 'configServer-udemyLeandro*' 
