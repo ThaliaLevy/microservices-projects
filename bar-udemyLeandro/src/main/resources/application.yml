@@ -8,7 +8,7 @@ spring:
     - optional:configserver:http://localhost:8888
   cloud:
     config:
-      profile: qa
+      profile: perf
 management:
   endpoints:
     web:
