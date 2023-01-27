@@ -6,6 +6,7 @@
 -> config-udemyLeandro <br>
 -> configServer-udemyLeandro <br>
 -> cambioService-udemyLeandro <br>
+-> bookService-udemyLeandro <br>
 </p>
 <p>
 Curso: Leandro Costa - Microsserviços do 0 com Spring Cloud, Spring Boot e Docker; <br>
