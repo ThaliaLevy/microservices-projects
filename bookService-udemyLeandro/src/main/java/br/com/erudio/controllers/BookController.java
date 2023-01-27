@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import br.com.erudio.models.Book;
+import br.com.erudio.proxy.CambioProxy;
 import br.com.erudio.repositories.BookRepository;
 import br.com.erudio.responses.Cambio;
 
@@ -19,10 +20,12 @@ public class BookController {
 	
 	private final Environment environment;
 	private final BookRepository bookRepository;
+	private final CambioProxy cambioProxy;
 	
-	public BookController(Environment environment, BookRepository bookRepository) {
+	public BookController(Environment environment, BookRepository bookRepository, CambioProxy cambioProxy) {
 		this.environment = environment;
 		this.bookRepository = bookRepository;
+		this.cambioProxy = cambioProxy;
 	}
 
 	//localhost:8000/book-service/1/BRL
@@ -35,13 +38,7 @@ public class BookController {
 		if(book == null) 
 			throw new RuntimeException("Book not found!");
 		
-		HashMap<String, String> params = new HashMap<>();
-		params.put("amount", book.getPrice().toString());
-		params.put("from", "USD");
-		params.put("to", currency);
-		
-		var response = new RestTemplate().getForEntity("http://localhost:8000/cambio-service/{amount}/{from}/{to}", Cambio.class, params);
-		var cambio = response.getBody();
+		var cambio = cambioProxy.getCambio(book.getPrice(), "USD", currency);
 		
 		var port = environment.getProperty("local.server.port");
 		book.setEnvironment(port);
