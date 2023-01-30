@@ -5,4 +5,6 @@
 - o actuator é uma ferramenta muito robusta, precisarei pesquisar mais a respeito. de forma geral, ela serve para verificar a saude do sistema, dos endpoints,
 fazer configurações, lida com segurança, etc.
 
-- 
+- Eureka é usado quando instâncias de serviços mudam dinamicamente devido a escala automática. O cliente se registra no servidor e este fica responsável por fazer a localização do serviço requisitado.
+
+- API Gateway serve para manter os códigos de execução comum a todos os microservices (exemplo autenticação, login, etc).
