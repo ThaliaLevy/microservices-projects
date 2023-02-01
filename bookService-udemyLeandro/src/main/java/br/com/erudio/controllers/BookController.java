@@ -1,18 +1,14 @@
 package br.com.erudio.controllers;
 
-import java.util.HashMap;
-
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import br.com.erudio.models.Book;
 import br.com.erudio.proxy.CambioProxy;
 import br.com.erudio.repositories.BookRepository;
-import br.com.erudio.responses.Cambio;
 
 @RestController
 @RequestMapping("book-service")
