@@ -7,8 +7,8 @@ eureka:
 spring:
   application:
     name: apiGateway-udemyLeandro
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
+ # cloud:
+   # gateway:
+     # discovery:
+        #locator:
+          #enabled: true
