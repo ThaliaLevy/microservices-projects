@@ -5,15 +5,21 @@
 -> bar-udemyLeandro  <br>
 -> config-udemyLeandro <br>
 -> configServer-udemyLeandro <br>
+</p>
+<p>
+<h3>Projeto 02:</h3> 
+<p>
 -> cambioService-udemyLeandro <br>
 -> bookService-udemyLeandro <br>
+-> namingServer-udemyLeandro <br>
+-> apiGateway-udemyLeandro <br>
 </p>
 <p>
 Curso: Leandro Costa - Microsserviços do 0 com Spring Cloud, Spring Boot e Docker; <br>
 Link: https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot-kubernetes-e-docker <br>
 </p>
 <hr>
-<h3>Projeto 02:</h3>
+<h3>Projeto 03:</h3>
 <p> 
 -> 
 </p>
