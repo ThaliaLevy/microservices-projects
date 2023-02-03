@@ -7,8 +7,17 @@ eureka:
 spring:
   application:
     name: apiGateway-udemyLeandro
- # cloud:
-   # gateway:
-     # discovery:
-        #locator:
-          #enabled: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      -  id: cambio-service
+         uri: lb://cambioservice-udemyleandro
+         predicates:
+         - Path=/cambio-service/**
+      -  id: book-service
+         uri: lb://bookservice-udemyleandro
+         predicates:
+         - Path=/book-service/**
