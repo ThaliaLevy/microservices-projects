@@ -27,7 +27,7 @@ public class BookController {
 		this.cambioProxy = cambioProxy;
 	}
 
-	//localhost:8000/book-service/1/BRL
+	//localhost:8100/book-service/1/BRL
 	@Operation(summary= "Find a specific book by your ID")
 	@GetMapping(value= "{id}/{currency}")
 	public Book findBook(@PathVariable(name="id") Long id,
