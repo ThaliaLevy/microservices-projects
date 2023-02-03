@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.erudio.models.Book;
 import br.com.erudio.proxy.CambioProxy;
 import br.com.erudio.repositories.BookRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "Book endpoint")
 @RestController
 @RequestMapping("book-service")
 public class BookController {
@@ -25,6 +28,7 @@ public class BookController {
 	}
 
 	//localhost:8000/book-service/1/BRL
+	@Operation(summary= "Find a specific book by your ID")
 	@GetMapping(value= "{id}/{currency}")
 	public Book findBook(@PathVariable(name="id") Long id,
 						 @PathVariable(name="currency") String currency) {
