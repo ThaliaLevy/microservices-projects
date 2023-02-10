@@ -31,3 +31,4 @@ Link: https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas <
 <h3>Recursos úteis</h3>
 <p>Actuator: https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html</p>
 <p>Circuit Breaker: https://resilience4j.readme.io/docs/circuitbreaker</p>
+<p>Zipkin (com docker): https://hub.docker.com/r/openzipkin/zipkin/</p>
