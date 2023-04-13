@@ -1,8 +1,0 @@
-- optar por utilizar um arquivo .yml ao inves do .properties pois o docker, por exemplo, utiliza este.
-
-- anotação @ConfigurationProperties para ler o arquivo de .yml/.properties.
-
-- o actuator é uma ferramenta muito robusta, precisarei pesquisar mais a respeito. de forma geral, ela serve para verificar a saude do sistema, dos endpoints,
-fazer configurações, lida com segurança, etc.
-
-- 
