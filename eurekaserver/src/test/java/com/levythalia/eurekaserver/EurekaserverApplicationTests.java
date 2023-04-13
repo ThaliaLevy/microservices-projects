@@ -1,10 +1,10 @@
-package com.levythalia.teste;
+package com.levythalia.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TesteApplicationTests {
+class EurekaserverApplicationTests {
 
 	@Test
 	void contextLoads() {
