@@ -9,5 +9,5 @@ public class EurekaserverApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaserverApplication.class, args);
 	}
-
+//http://172.20.127.27/
 }
