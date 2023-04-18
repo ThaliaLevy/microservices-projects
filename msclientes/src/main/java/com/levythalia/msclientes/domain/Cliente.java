@@ -13,16 +13,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
 
-	public Cliente(String cpf, String nome, String idade) {
+	public Cliente(String cpf, String nome, Integer idade) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.idade = idade;
 	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String cpf;
 	private String nome;
-	private String idade;
+	private Integer idade;
 }
