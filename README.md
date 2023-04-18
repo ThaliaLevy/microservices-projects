@@ -8,7 +8,6 @@ Link: https://www.udemy.com/course/domine-microservicos-e-mensageria-com-spring-
 </p>
 <hr>
 <h3>Recursos úteis</h3>
-<p>Arquitetura: 
-![image](https://user-images.githubusercontent.com/69092295/232635686-8bb67e54-575d-4d41-af24-0651411ffa93.png)
-
+<p> - Arquitetura: <br>
+<img width="600" alt="arquitetura" src="https://user-images.githubusercontent.com/69092295/232635841-fc96b976-2fd9-4eaa-8dac-94bdf0b01fd6.png">
 </p>
