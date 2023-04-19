@@ -1,0 +1,21 @@
+spring:
+ application:
+  name: mscloudgateway
+
+ cloud:
+  gateway:
+   discovery:
+    locator:
+     enabled: true #habilita a descoberta dos microservices
+     lower-case-service-id: true  #caixa baixa para nomes dos micros. -> no lb: do @Bean
+     
+server:
+ port: 8080
+ 
+eureka:
+ client:
+   fetch-registry: true
+   register-with-eureka: true
+   service-url:
+    defaultZone: http://localhost:8761/eureka
+    
