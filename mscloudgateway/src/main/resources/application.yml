@@ -1,7 +1,6 @@
 spring:
  application:
   name: mscloudgateway
-
  cloud:
   gateway:
    discovery:
@@ -10,12 +9,14 @@ spring:
      lower-case-service-id: true  #caixa baixa para nomes dos micros. -> no lb: do @Bean
      
 server:
- port: 8080
- 
+  port: 8081
+  
 eureka:
- client:
-   fetch-registry: true
-   register-with-eureka: true
-   service-url:
-    defaultZone: http://localhost:8761/eureka
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true #para resolver o problema de dns
     
