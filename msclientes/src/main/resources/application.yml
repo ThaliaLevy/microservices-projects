@@ -1,9 +1,9 @@
 spring:
  application:
-  name: msclientes
+  name: mscartoes
 
 server:
- port: 0
+ port: 0 #porta random
 
 eureka:
  client:
