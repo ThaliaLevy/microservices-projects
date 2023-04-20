@@ -17,6 +17,5 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true #para resolver o problema de dns
+
     
