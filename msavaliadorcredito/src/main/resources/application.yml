@@ -1,9 +1,9 @@
 spring:
  application:
-  name: msclientes
+  name: msavaliadorcredito
 
 server:
- port: 0 #porta random
+ port: 0
 
 eureka:
  client:
