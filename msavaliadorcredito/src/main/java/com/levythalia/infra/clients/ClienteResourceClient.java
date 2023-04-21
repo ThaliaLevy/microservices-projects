@@ -12,4 +12,5 @@ public interface ClienteResourceClient {
 
 	@GetMapping(params = "cpf")
 	public ResponseEntity<DadosCliente> dadosCliente(@RequestParam String cpf);
+	
 }
