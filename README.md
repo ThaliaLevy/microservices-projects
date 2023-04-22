@@ -15,3 +15,13 @@ Link: https://www.udemy.com/course/domine-microservicos-e-mensageria-com-spring-
 - Arquitetura mensageria: <br>
 <img width="605" alt="mensageria" src="https://user-images.githubusercontent.com/69092295/233665426-f1f5091f-4281-47eb-8810-723cb991ee73.png">
 </p>
+<p>
+<b> - Iniciando RabbitMQ</b> <br>
+1. Instalar com o docker: <br>
+<code>sudo docker run -it --name cursomsrabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management</code> 
+<br><br>
+Legenda: <br>
+<i>--name cursomsrabbitmq</i> -> nome do container. <br>
+<i>5672:5672 e  15672:15672</i> -> portas espelhadas do container. <br>
+<i>rabbitmq:3.9-management</i> -> nome da imagem + :tag da versão  <br>
+</p>
