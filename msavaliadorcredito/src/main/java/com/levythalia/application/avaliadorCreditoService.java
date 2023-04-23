@@ -2,6 +2,7 @@ package com.levythalia.application;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
@@ -10,14 +11,18 @@ import org.springframework.stereotype.Service;
 
 import com.levythalia.application.exception.DadosClienteNotFoundException;
 import com.levythalia.application.exception.ErroComunicacaoMicroservicesException;
+import com.levythalia.application.exception.ErroSolicitacaoCartaoException;
 import com.levythalia.domain.model.Cartao;
 import com.levythalia.domain.model.CartaoAprovado;
 import com.levythalia.domain.model.CartaoCliente;
 import com.levythalia.domain.model.DadosCliente;
+import com.levythalia.domain.model.DadosSolicitacaoEmissaoCartao;
+import com.levythalia.domain.model.ProtocoloSolicitacaoCartao;
 import com.levythalia.domain.model.RetornoAvaliacaoCliente;
 import com.levythalia.domain.model.SituacaoCliente;
 import com.levythalia.infra.clients.CartoesResourceClient;
 import com.levythalia.infra.clients.ClienteResourceClient;
+import com.levythalia.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +33,7 @@ public class avaliadorCreditoService {
 	
 	private final ClienteResourceClient clientesClient;
 	private final CartoesResourceClient cartoesClient;
+	private final SolicitacaoEmissaoCartaoPublisher emissaoCartaoPublisher;
 
 	public SituacaoCliente obterSituacaoCliente(String cpf) throws DadosClienteNotFoundException, ErroComunicacaoMicroservicesException {
 		try {
@@ -83,6 +89,17 @@ public class avaliadorCreditoService {
 			}
 			
 			throw new ErroComunicacaoMicroservicesException(e.getMessage(), status);
+		}
+	}
+	
+	public ProtocoloSolicitacaoCartao solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartao dados) {
+		try {
+			emissaoCartaoPublisher.solicitarCartao(dados);
+			var protocolo = UUID.randomUUID().toString();
+			
+			return new ProtocoloSolicitacaoCartao(protocolo);
+		} catch (Exception e) {
+			throw new ErroSolicitacaoCartaoException(e.getMessage());
 		}
 	}
 }

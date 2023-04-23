@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class SolicitacaoEmissaoCartaoSubscriber {
+public class SolicitacaoEmissaoCartaoPublisher {
 
 	private final RabbitTemplate rabbitTemplate;
 	private final Queue queueEmissaoCartoes;
