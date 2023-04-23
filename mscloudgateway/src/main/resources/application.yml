@@ -6,6 +6,11 @@ spring:
    discovery:
     locator:
      enabled: true #habilita a descoberta dos microservices
+ security: #para indicar a url de onde será gerado o token (no keycloak)
+  oauth2:
+   resourceserver:
+    jwt:
+     issuer-uri: http://localhost:8081/realms/mscurso
     
 eureka:
   client:

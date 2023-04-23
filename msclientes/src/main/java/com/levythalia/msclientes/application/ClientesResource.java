@@ -29,7 +29,7 @@ public class ClientesResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity save(@RequestBody ClienteSaveRequest request) {
+	public ResponseEntity<?> save(@RequestBody ClienteSaveRequest request) {
 		Cliente cliente = request.toModel();
 		service.save(cliente);
 		URI headerLocation = ServletUriComponentsBuilder
@@ -42,7 +42,7 @@ public class ClientesResource {
 	}
 	
 	@GetMapping(params = "cpf")
-	public ResponseEntity dadosCliente(@RequestParam String cpf) {
+	public ResponseEntity<?> dadosCliente(@RequestParam String cpf) {
 		var cliente = service.getByCPF(cpf);
 		if(cliente.isEmpty()) {
 			return ResponseEntity.notFound().build();
