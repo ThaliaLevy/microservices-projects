@@ -23,10 +23,14 @@ Link: https://www.udemy.com/course/domine-microservicos-e-mensageria-com-spring-
 Legenda: <br>
 <i>--name cursomsrabbitmq</i> -> nome do container. <br>
 <i>5672:5672 e  15672:15672</i> -> portas espelhadas do container. <br>
-<i>rabbitmq:3.9-management</i> -> nome da imagem + :tag da versão  <br>
-2. Abrir na porta http://localhost:15672/
+<i>rabbitmq:3.9-management</i> -> nome da imagem + :tag da versão  
+<br><br>
+2. Abrir na porta http://localhost:15672/ <br>
+3. Usuário e senha padrão: guest
 <br><br>
 <b> - Iniciando Keycloak</b> <br>
 1. Instalar com o docker: <br>
-<code>sudo docker run -it --name cursomsrabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management</code> 
+<code>sudo docker run -it --name cursomsrabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management</code> <br>
+2. Abrir na porta http://localhost:8081/ <br>
+3. Usuário e senha padrão: admin
 </p>
