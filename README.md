@@ -24,4 +24,9 @@ Legenda: <br>
 <i>--name cursomsrabbitmq</i> -> nome do container. <br>
 <i>5672:5672 e  15672:15672</i> -> portas espelhadas do container. <br>
 <i>rabbitmq:3.9-management</i> -> nome da imagem + :tag da versão  <br>
+2. Abrir na porta http://localhost:15672/
+<br><br>
+<b> - Iniciando Keycloak</b> <br>
+1. Instalar com o docker: <br>
+<code>sudo docker run -it --name cursomsrabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management</code> 
 </p>
