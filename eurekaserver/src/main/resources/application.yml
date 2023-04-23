@@ -7,3 +7,9 @@ server:
 spring:
   application:
     name: EUREKASERVER
+  security:
+   basic: 
+    enabled: true #habilita autenticação basica do spring security
+   user: 
+    name: mscurso-eureka-user #utilizar para abrir o eureka no navegador
+    password: teste
