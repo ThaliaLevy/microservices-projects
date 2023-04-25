@@ -10,3 +10,5 @@ COPY --from=build ./app/target/*.jar ./app.jar
 ARG EUREKA_SERVER=localhost
 
 ENTRYPOINT java -jar app.jar
+
+
