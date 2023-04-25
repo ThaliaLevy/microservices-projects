@@ -8,7 +8,7 @@ server:
 eureka:
  client:
   service-url:
-   defaultZone: http://mscurso-eureka-user:teste@localhost:8761/eureka
+   defaultZone: http://mscurso-eureka-user:teste@${EUREKA_SERVER}:8761/eureka
  instance:
   instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   prefer-ip-address: true #para resolver o problema de dns
