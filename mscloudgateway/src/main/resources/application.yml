@@ -10,14 +10,14 @@ spring:
   oauth2:
    resourceserver:
     jwt:
-     issuer-uri: http://localhost:8081/realms/mscurso
+     issuer-uri: http://${KEYCLOAK_SERVER}:${KEYCLOAK_PORT}/realms/mscurso
     
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://mscurso-eureka-user:teste@localhost:8761/eureka #mscurso-eureka-user:teste = user:password configurado no eureka
+      defaultZone: http://mscurso-eureka-user:teste@${EUREKA_SERVER}:8761/eureka #mscurso-eureka-user:teste = user:password configurado no eureka
       
 
     
